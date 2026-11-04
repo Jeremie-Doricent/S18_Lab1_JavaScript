@@ -34,7 +34,12 @@ function changerStyle() {
         demoDiv.innerHTML += `<p style="color: ${couleurSaisie}">${contenuTexte}</p>`;
     }
 }
-  
-function changerClassBoutons() {
+  function changerClassBoutons() {
   // Obtenir les éléments boutons et changer leur className pour celui qui est spécifié dans l'input
+  let nouvelleClasse = document.getElementById("btnClass").value;
+
+  let boutons = document.getElementsByTagName("button");
+  for (let bouton of boutons) {
+    bouton.className = nouvelleClasse;
+  }
 }
